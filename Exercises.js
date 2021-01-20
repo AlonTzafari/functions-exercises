@@ -46,7 +46,18 @@ function myPower(x, n) {
 
 //Question 5
 function getFirstNotRepeating(str) {
-  // your code here
+  for(let i = 0; i < str.length; i++) {
+    const curChar = str.charAt(i);
+    let isRepeated = false;
+    for (let j = 0; j < str.length; j++) {
+      if (i !== j && curChar === str.charAt(j) ) {
+        isRepeated = true;
+      }
+    }
+    if (!isRepeated) { 
+      return curChar;
+    }
+  }
   return "";
 }
 
@@ -58,7 +69,7 @@ function isPrefectNumber(num) {
 
 // *** Playground ***
 // Feel free to run and test your code here on your own
-console.log(allCaps('the quick brown fox'));
+console.log( getFirstNotRepeating('abacddbec') );
 // *** End of Playground ***
 
 // Don't touch me :)
