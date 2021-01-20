@@ -1,14 +1,17 @@
 //Question 1
 function myReverse(str) {
-  // your code here
-  return "";
+  let reversedStr = "";
+  for(let i = str.length - 1; i >= 0; i--){
+    reversedStr += str[i];
+  }
+  return reversedStr;
 }
 
 //Question 2
 function allCombinations(str) {
   let combinations = [];
   // your code here
-
+  
   //
   return combinations;
 }
