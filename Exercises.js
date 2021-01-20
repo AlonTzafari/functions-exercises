@@ -21,14 +21,18 @@ function allCombinations(str) {
       }
     }
   }
-  //
+  
   return combinations;
 }
 
 //Question 3
 function allCaps(str) {
-  // your code here
-  return "";
+  const strArr = str.split(" ");
+  for(let i = 0; i < strArr.length; i++) {
+    const word = strArr[i];
+    strArr[i] = word.charAt(0).toUpperCase() + word.slice(1, word.length);
+  }
+  return strArr.join(" ");
 }
 
 //Question 4
@@ -51,7 +55,7 @@ function isPrefectNumber(num) {
 
 // *** Playground ***
 // Feel free to run and test your code here on your own
-
+console.log(allCaps('the quick brown fox'));
 // *** End of Playground ***
 
 // Don't touch me :)
