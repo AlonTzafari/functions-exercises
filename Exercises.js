@@ -11,7 +11,16 @@ function myReverse(str) {
 function allCombinations(str) {
   let combinations = [];
   // your code here
-  
+  for(let i = 0; i < str.length; i++) {
+    let curStr = str[i];
+    combinations.push(curStr);
+    if (i < str.length - 1){
+      for(let j = i + 1; j < str.length; j++) {
+        curStr += str[j];
+        combinations.push(curStr);
+      }
+    }
+  }
   //
   return combinations;
 }
